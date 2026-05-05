@@ -1,4 +1,4 @@
-package uni.edu.pe.Ejercicios_Condicionales;
+package uni.edu.pe.Ejercicios.Ejercicios_Condicionales;
 
 import java.util.Scanner;
 

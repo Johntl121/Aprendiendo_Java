@@ -1,4 +1,4 @@
-package uni.edu.pe.Ejercicios_Operadores;
+package uni.edu.pe.Ejercicios.Ejercicios_Operadores;
 
 import java.util.Scanner;
 
