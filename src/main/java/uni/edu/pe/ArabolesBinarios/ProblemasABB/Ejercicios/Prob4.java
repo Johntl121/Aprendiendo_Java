@@ -1,7 +1,7 @@
 package uni.edu.pe.ArabolesBinarios.ProblemasABB.Ejercicios;
 
 // Prob4: Dado un nodo, devolver su predecesor de forma iterativa
-public class Prob4 {
+public class Prob4 extends BSTree {
     public BSTNode getPredecessor(BSTNode node) {
         if (node == null) return null;
 

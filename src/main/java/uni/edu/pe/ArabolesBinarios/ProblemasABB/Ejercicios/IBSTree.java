@@ -1,7 +1,5 @@
 package uni.edu.pe.ArabolesBinarios.ProblemasABB.Ejercicios;
 
-import uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode;
-
 public interface IBSTree {
     // Retorna el número total de nodos
     public int getSize();
@@ -22,6 +20,6 @@ public interface IBSTree {
 
     // Nuevas herramientas sofisticadas
     public boolean isEmpty(); // ¿El árbol está vacío?
-    public uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode findMin(); // Devuelve el nodo más pequeño
+    public BSTNode findMin(); // Devuelve el nodo más pequeño
     public BSTNode findMax(); // Devuelve el nodo más grande
 }

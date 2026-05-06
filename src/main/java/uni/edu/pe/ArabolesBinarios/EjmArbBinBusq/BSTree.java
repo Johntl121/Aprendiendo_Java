@@ -2,7 +2,7 @@ package uni.edu.pe.ArabolesBinarios.EjmArbBinBusq;
 
 public class BSTree implements IBSTree {
 
-    private BSTNode root; // Nodo raíz del árbol
+    protected BSTNode root; // Nodo raíz del árbol
 
     // =========================
     // TAMAÑO DEL ÁRBOL

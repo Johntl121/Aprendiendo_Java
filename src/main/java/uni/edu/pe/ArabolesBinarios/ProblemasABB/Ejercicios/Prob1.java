@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // Prob1: Implementar un metodo que reciba un nodo y devuelva su recorrido por niveles.
-public class Prob1 {
+public class Prob1 extends BSTree {
     public void showLevelOrder(BSTNode startNode) {
         if (startNode == null) return;
 

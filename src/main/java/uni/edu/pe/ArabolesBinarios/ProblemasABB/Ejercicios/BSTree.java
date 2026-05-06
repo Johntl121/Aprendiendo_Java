@@ -1,11 +1,8 @@
 package uni.edu.pe.ArabolesBinarios.ProblemasABB.Ejercicios;
 
-import uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode;
-import uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.IBSTree;
-
 public class BSTree implements IBSTree {
 
-    private uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode root; // Nodo raíz del árbol
+    protected BSTNode root; // Nodo raíz del árbol
 
     // =========================
     // TAMAÑO DEL ÁRBOL
@@ -16,7 +13,7 @@ public class BSTree implements IBSTree {
         return getSize(root); // inicia desde la raíz
     }
 
-    private int getSize(uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode node) {
+    private int getSize(BSTNode node) {
         if (node == null) return 0; // caso base
 
         // cuenta nodo actual + subárbol izquierdo + subárbol derecho
@@ -32,7 +29,7 @@ public class BSTree implements IBSTree {
         return getHeight(root);
     }
 
-    private int getHeight(uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode node) {
+    private int getHeight(BSTNode node) {
         if (node == null) return 0;
 
         // altura = 1 + la mayor altura entre hijos
@@ -51,7 +48,7 @@ public class BSTree implements IBSTree {
         showPreOrder(root);
     }
 
-    private void showPreOrder(uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode node) {
+    private void showPreOrder(BSTNode node) {
         if (node == null) return;
 
         System.out.println(node.elem);     // 1. raíz
@@ -68,7 +65,7 @@ public class BSTree implements IBSTree {
         showInOrder(root);
     }
 
-    private void showInOrder(uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode node) {
+    private void showInOrder(BSTNode node) {
         if (node == null) return;
 
         showInOrder(node.leftChild);       // 1. izquierda
@@ -85,7 +82,7 @@ public class BSTree implements IBSTree {
         showPostOrder(root);
     }
 
-    private void showPostOrder(uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode node) {
+    private void showPostOrder(BSTNode node) {
         if (node == null) return;
 
         showPostOrder(node.leftChild);     // 1. izquierda
@@ -114,13 +111,13 @@ public class BSTree implements IBSTree {
     /*
      * Herramienta 2: Encontrar el MÍNIMO.
      * Lógica: En un BST, el menor valor SIEMPRE está lo más a la izquierda posible.
-     * Retorna el NODO completo para que puedas acceder a su .parent si lo necesitas.
+     * Retorna el NODO completo para que puedas acceder a su parent si lo necesitas.
      */
     @Override
-    public uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode findMin() {
+    public BSTNode findMin() {
         if (isEmpty()) return null;
 
-        uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode current = root;
+        BSTNode current = root;
         // Mientras haya un camino hacia la izquierda, seguimos bajando
         while (current.leftChild != null) {
             current = current.leftChild;
@@ -133,10 +130,10 @@ public class BSTree implements IBSTree {
      * Lógica: En un BST, el mayor valor SIEMPRE está lo más a la derecha posible.
      */
     @Override
-    public uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode findMax() {
+    public BSTNode findMax() {
         if (isEmpty()) return null;
 
-        uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode current = root;
+        BSTNode current = root;
         // Mientras haya un camino hacia la derecha, seguimos bajando
         while (current.rightChild != null) {
             current = current.rightChild;
@@ -151,7 +148,7 @@ public class BSTree implements IBSTree {
     @Override
     public void insert(int key, String elem) {
 
-        uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode newNode = new uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode(key, elem);
+        BSTNode newNode = new BSTNode(key, elem);
 
         if (root == null) {
             // Si el árbol está vacío, el nodo se vuelve raíz
@@ -162,7 +159,7 @@ public class BSTree implements IBSTree {
         }
     }
 
-    private void insert(uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode newNode, uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode node) {
+    private void insert(BSTNode newNode, BSTNode node) {
 
         int key = newNode.key;
 
@@ -199,7 +196,7 @@ public class BSTree implements IBSTree {
         root = remove(key, root); // puede cambiar la raíz
     }
 
-    private uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode remove(Integer key, uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode currentNode) {
+    private BSTNode remove(Integer key, BSTNode currentNode) {
 
         if (currentNode == null) {
             System.out.println("No se encontró el elemento");
@@ -236,7 +233,7 @@ public class BSTree implements IBSTree {
 
             // Caso 3: Tiene dos hijos.
             // Buscar sucesor (mínimo del subárbol derecho)
-            uni.edu.pe.ArabolesBinarios.EjmArbBinBusq.BSTNode succesorNode = currentNode.rightChild;
+            BSTNode succesorNode = currentNode.rightChild;
 
             while (succesorNode.leftChild != null) {
                 succesorNode = succesorNode.leftChild; // Baja todo lo posible a la izquierda.

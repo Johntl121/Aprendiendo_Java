@@ -1,7 +1,7 @@
 package uni.edu.pe.ArabolesBinarios.ProblemasABB.Ejercicios;
 
 // Prob5: Dado un nodo, devolver su sucesor de forma iterativa
-public class Prob5 {
+public class Prob5 extends BSTree {
     public BSTNode getSuccessor(BSTNode node) {
         if (node == null) return null;
 

@@ -1,8 +1,7 @@
 package uni.edu.pe.ArabolesBinarios.ProblemasABB.Ejercicios;
 
 //Prob2: Recorrer el árbol recursivamente e imprimir los elementos cuyo abuelo tenga un valor múltiplo de 10
-public class Prob2 {
-    private BSTNode root;
+public class Prob2 extends BSTree {
 
     public void printGrandparentMultipleOf10() {
         System.out.println("Nodos con abuelo múltiplo de 10:");
