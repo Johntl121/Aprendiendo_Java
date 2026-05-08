@@ -1,5 +1,8 @@
 package uni.edu.pe.ArabolesBinarios.ProblemasABB.Ejercicios;
 
+// Prob11: Añadir un metodo que compruebe si el árbol está equilibrado en altura, es decir,
+// que todos sus nodos tienen un factor de equilibrio en altura menor o igual que 1.
+// (Esta es exactamente la condición de un Árbol AVL)
 public class Prob11 extends BSTree {
 
     // =======================================================

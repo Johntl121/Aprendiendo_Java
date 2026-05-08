@@ -1,5 +1,7 @@
 package uni.edu.pe.ArabolesBinarios.ProblemasABB.Ejercicios;
 
+// Prob12: Crear una clase Test con un metodo main, instanciar el árbol e
+// insertar una secuencia específica de elementos
 public class Prob12 extends BSTree {
     public static void main(String[] args) {
         System.out.println("====== INICIANDO CONSTRUCCIÓN DEL ÁRBOL (EJERCICIO 12) ======\n");
@@ -14,7 +16,7 @@ public class Prob12 extends BSTree {
         // 3. Insertamos los elementos iterando el arreglo
         System.out.println("Insertando elementos...");
         for (int valor : secuencia) {
-            // El ejercicio dice elementos (k,e) donde llave y valor son iguales.
+            // El ejercicio dice elementos (k, e) donde llave y valor son iguales.
             // Pasamos String.valueOf(valor) porque tu BSTNode espera un String como 'elem'
             tree.insert(valor, String.valueOf(valor));
         }
